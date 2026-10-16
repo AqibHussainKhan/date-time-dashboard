@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date & Time Dashboard</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-950 via-indigo-950 to-black p-10">
+
+    <!-- Heading -->
+
+    <div class="text-center mb-14">
+
+        <h1 class="text-6xl font-extrabold text-white">
+            Date & Time Dashboard
+        </h1>
+
+    </div>
+
+
+    <!-- Cards -->
+
+    <div class="grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-10 justify-items-center">
+
+
+
+        <!-- ================================================= -->
+        <!-- Question 1 -->
+        <!-- ================================================= -->
+
+        <div
+            class="w-[420px] rounded-[30px] bg-gradient-to-br from-indigo-900 via-violet-800 to-purple-900 p-8 backdrop-blur-xl border border-white/20 shadow-2xl">
+
+            <div
+                class="w-[90px] h-[90px] mx-auto rounded-full bg-gradient-to-r from-violet-400 to-indigo-500 flex justify-center items-center text-[45px] shadow-xl">
+                🗓️
+            </div>
+
+            <h1 class="text-white text-[32px] font-bold text-center mt-6">
+                Current Year
+            </h1>
+
+            <p class="text-gray-200 text-center mt-3">
+                Click below to display the current year.
+            </p>
+
+            <div class="bg-black/30 rounded-2xl py-6 mt-8 shadow-inner">
+
+                <h2 id="year"
+                    class="text-center text-violet-300 text-[55px] font-extrabold font-mono">
+                    ----
+                </h2>
+
+            </div>
+
+            <button onclick="showYear()"
+                class="mt-8 w-full py-4 rounded-xl bg-gradient-to-r from-violet-500 to-indigo-600 text-white font-bold text-lg hover:scale-105 duration-300 active:scale-95 shadow-lg">
+
+                Show Year
+
+            </button>
+
+        </div>
+
+
+
+        <!-- ================================================= -->
+        <!-- Question 2 -->
+        <!-- ================================================= -->
+
+        <div
+            class="w-[420px] rounded-[30px] bg-gradient-to-br from-sky-900 via-cyan-800 to-blue-900 p-8 backdrop-blur-xl border border-white/20 shadow-2xl">
+
+            <div
+                class="w-[90px] h-[90px] mx-auto rounded-full bg-gradient-to-r from-cyan-300 to-sky-500 flex justify-center items-center text-[45px] shadow-xl">
+                📆
+            </div>
+
+            <h1 class="text-white text-[32px] font-bold text-center mt-6">
+                Current Month
+            </h1>
+
+            <p class="text-gray-200 text-center mt-3">
+                Display the current month number.
+            </p>
+
+            <div class="bg-black/30 rounded-2xl py-6 mt-8 shadow-inner">
+
+                <h2 id="month"
+                    class="text-center text-cyan-300 text-[55px] font-extrabold font-mono">
+                    --
+                </h2>
+
+            </div>
+
+            <button onclick="showMonth()"
+                class="mt-8 w-full py-4 rounded-xl bg-gradient-to-r from-cyan-400 to-blue-600 text-white font-bold text-lg hover:scale-105 duration-300 active:scale-95 shadow-lg">
+
+                Show Month
+
+            </button>
+
+        </div>
+
+
+
+
+        <!-- ================================================= -->
+        <!-- Question 3 -->
+        <!-- ================================================= -->
+
+        <div
+            class="w-[420px] rounded-[30px] bg-gradient-to-br from-rose-900 via-pink-800 to-fuchsia-900 p-8 backdrop-blur-xl border border-white/20 shadow-2xl">
+
+            <div
+                class="w-[90px] h-[90px] mx-auto rounded-full bg-gradient-to-r from-pink-400 to-rose-500 flex justify-center items-center text-[45px] shadow-xl">
+                🌸
+            </div>
+
+            <h1 class="text-white text-[32px] font-bold text-center mt-6">
+                Month Name
+            </h1>
+
+            <p class="text-gray-200 text-center mt-3">
+                Show the current month name.
+            </p>
+
+            <div class="bg-black/30 rounded-2xl py-6 mt-8 shadow-inner">
+
+                <h2 id="monthName"
+                    class="text-center text-pink-300 text-[40px] font-extrabold font-mono">
+                    ----------
+                </h2>
+
+            </div>
+
+            <button onclick="showMonthName()"
+                class="mt-8 w-full py-4 rounded-xl bg-gradient-to-r from-pink-500 to-rose-600 text-white font-bold text-lg hover:scale-105 duration-300 active:scale-95 shadow-lg">
+
+                Show Month Name
+
+            </button>
+
+        </div>
+
+                <!-- ================================================= -->
+        <!-- Question 4 -->
+        <!-- ================================================= -->
+
+        <div
+            class="w-[420px] rounded-[30px] bg-gradient-to-br from-orange-900 via-amber-800 to-yellow-700 p-8 backdrop-blur-xl border border-white/20 shadow-2xl">
+
+            <div
+                class="w-[90px] h-[90px] mx-auto rounded-full bg-gradient-to-r from-yellow-300 to-orange-500 flex justify-center items-center text-[45px] shadow-xl">
+                📅
+            </div>
+
+            <h1 class="text-white text-[32px] font-bold text-center mt-6">
+                Current Date
+            </h1>
+
+            <p class="text-gray-200 text-center mt-3">
+                Click below to display today's date.
+            </p>
+
+            <div class="bg-black/30 rounded-2xl py-6 mt-8 shadow-inner">
+
+                <h2 id="date"
+                    class="text-center text-yellow-300 text-[55px] font-extrabold font-mono">
+                    --
+                </h2>
+
+            </div>
+
+            <button onclick="showDate()"
+                class="mt-8 w-full py-4 rounded-xl bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold text-lg hover:scale-105 duration-300 active:scale-95 shadow-lg">
+
+                Show Date
+
+            </button>
+
+        </div>
+
+
+
+        <!-- ================================================= -->
+        <!-- Question 5 -->
+        <!-- ================================================= -->
+
+        <div
+            class="w-[420px] rounded-[30px] bg-gradient-to-br from-emerald-900 via-green-800 to-teal-900 p-8 backdrop-blur-xl border border-white/20 shadow-2xl">
+
+            <div
+                class="w-[90px] h-[90px] mx-auto rounded-full bg-gradient-to-r from-lime-300 to-emerald-500 flex justify-center items-center text-[45px] shadow-xl">
+                🌞
+            </div>
+
+            <h1 class="text-white text-[32px] font-bold text-center mt-6">
+                Current Day
+            </h1>
+
+            <p class="text-gray-200 text-center mt-3">
+                Display today's day name.
+            </p>
+
+            <div class="bg-black/30 rounded-2xl py-6 mt-8 shadow-inner">
+
+                <h2 id="day"
+                    class="text-center text-lime-300 text-[38px] font-extrabold font-mono">
+                    ----------
+                </h2>
+
+            </div>
+
+            <button onclick="showDay()"
+                class="mt-8 w-full py-4 rounded-xl bg-gradient-to-r from-lime-400 to-emerald-500 text-black font-bold text-lg hover:scale-105 duration-300 active:scale-95 shadow-lg">
+
+                Show Day
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ========================= -->
+    <!-- JavaScript -->
+    <!-- ========================= -->
+
+    <script>
+
+        function showYear() {
+            document.getElementById("year").textContent =
+                new Date().getFullYear();
+        }
+
+
+        function showMonth() {
+            document.getElementById("month").textContent =
+                new Date().getMonth() + 1;
+        }
+
+
+        function showMonthName() {
+
+            const months = [
+                "January",
+                "February",
+                "March",
+                "April",
+                "May",
+                "June",
+                "July",
+                "August",
+                "September",
+                "October",
+                "November",
+                "December"
+            ];
+
+            document.getElementById("monthName").textContent =
+                months[new Date().getMonth()];
+        }
+
+
+        function showDate() {
+            document.getElementById("date").textContent =
+                new Date().getDate();
+        }
+
+
+        function showDay() {
+
+            const days = [
+                "Sunday",
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday"
+            ];
+
+            document.getElementById("day").textContent =
+                days[new Date().getDay()];
+        }
+
+    </script>
+
+</body>
+
+</html>
